@@ -9,24 +9,24 @@ int WinMain(
 {
     STARTUPINFO si={sizeof(si)};
     PROCESS_INFORMATION pi;
-    si.dwFlags=STARTF_USESHOWWINDOW;//ָ��wShowWindow��Ա��Ч
-    si.wShowWindow=TRUE;//�˳�Ա��ΪTRUE�Ļ�����ʾ�½����̵�������
+    si.dwFlags=STARTF_USESHOWWINDOW;//指定wShowWindow成员有效
+    si.wShowWindow=TRUE;//此成员设为TRUE的话则显示新建进程的主窗口
     BOOL bRet=CreateProcess(
-    NULL,//���ڴ�ָ����ִ���ļ����ļ���
-    lpCmdLine,//�����в���
-    NULL,//Ĭ�Ͻ��̰�ȫ��
-    NULL,//Ĭ�Ͻ��̰�ȫ��
-    FALSE,//ָ����ǰ�����ھ�������Ա��ӽ��̼̳�
-    CREATE_NO_WINDOW,//Ϊ�½��̴���һ���µĿ���̨����
-    NULL,//ʹ�ñ����̵Ļ�������
-    NULL,//ʹ�ñ����̵���������Ŀ¼
+    NULL,//不在此指定可执行文件的文件名
+    lpCmdLine,//命令行参数
+    NULL,//默认进程安全性
+    NULL,//默认进程安全性
+    FALSE,//指定当前进程内句柄不可以被子进程继承
+    CREATE_NO_WINDOW,//为新进程创建一个新的控制台窗口
+    NULL,//使用本进程的环境变量
+    NULL,//使用本进程的驱动器和目录
     &si,
     &pi);
     if(bRet)
     {
-        //��ʹ�õľ����ùص�
+        //不使用的句柄最好关掉
         CloseHandle(pi.hThread);
-        CloseHandle(pi.hProcess);\
+        CloseHandle(pi.hProcess);
     }
     return 0;
 }
