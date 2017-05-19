@@ -26,7 +26,8 @@ int WinMain(
     {
         WaitForSingleObject(pi.hProcess, INFINITE);
         // Get the exit code.
-        result = GetExitCodeProcess(pi.hProcess, &exitCode);
+        DWORD exitCode;
+        int result = GetExitCodeProcess(pi.hProcess, &exitCode);
         //不使用的句柄最好关掉
         CloseHandle(pi.hThread);
         CloseHandle(pi.hProcess);
