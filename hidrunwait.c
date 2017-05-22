@@ -31,7 +31,7 @@ int WinMain(
         //不使用的句柄最好关掉
         CloseHandle(pi.hThread);
         CloseHandle(pi.hProcess);
-        return result;
+        if (result) return exitCode;
     }
     return 0;
 }
