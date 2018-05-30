@@ -1,10 +1,12 @@
 # hidrun
 
+[![Build status](https://ci.appveyor.com/api/projects/status/cbmhdv7yo5s60ebg?svg=true)](https://ci.appveyor.com/project/myfreeer/hidrun)
+
 run something without opening a new window
 
 ## Release
 
-[![Download](https://img.shields.io/github/downloads/myfreeer/hidrun/total.svg)](https://github.com/myfreeer/sendinput/releases/latest)
+[![Download](https://img.shields.io/github/downloads/myfreeer/hidrun/total.svg)](https://github.com/myfreeer/hidrun/releases/latest)
 
 ## Usage
 
