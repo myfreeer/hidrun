@@ -2,7 +2,7 @@
 #include "winmain.h"
 #define UNUSED __attribute__((unused))
 
-int WinMain(HINSTANCE UNUSED hInstance, HINSTANCE UNUSED hPrevInstance,
+int WINAPI WinMain(HINSTANCE UNUSED hInstance, HINSTANCE UNUSED hPrevInstance,
             LPSTR lpCmdLine, int UNUSED nCmdShow) {
     STARTUPINFO si = {0};
     si.cb = sizeof(STARTUPINFO);
