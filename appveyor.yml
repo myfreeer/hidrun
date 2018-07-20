@@ -14,3 +14,9 @@ artifacts:
 - path: hidrun_x86.exe
 - path: hidrunwait_x86.exe
 - path: hidrun.7z
+
+skip_commits:
+  files:
+    - 'LICENSE'
+    - '*.md'
+    - '.gitingore'
